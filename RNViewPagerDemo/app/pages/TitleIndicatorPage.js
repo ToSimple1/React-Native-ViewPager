@@ -13,7 +13,7 @@ export default class TitleIndicatorPage extends Component {
     state = {
         bgColor: new Animated.Value(0)
     }
-    _setBgColor = Animated.event([{bgColor: this.state.bgColor}])
+    _setBgColor = Animated.event([{bgColor: this.state.bgColor}], { useNativeDriver: true })
 
     render () {
         let bgColor = this.state.bgColor.interpolate({
